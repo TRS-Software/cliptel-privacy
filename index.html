@@ -1,105 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – ClipTel</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy Policy – ClipTel Chrome Extension</title>
   <style>
-    :root { --blue: #2563eb; --gray: #6b7280; --bg: #fafafa; --border: #e5e7eb; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: #111827; line-height: 1.65; }
-    .header { background: #1e293b; color: #f8fafc; padding: 2rem 1rem; text-align: center; }
-    .header h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.25rem; }
-    .header p { color: #94a3b8; font-size: 0.9rem; }
-    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
-    h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; color: #1e293b; border-bottom: 2px solid var(--border); padding-bottom: 0.4rem; }
-    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #374151; }
-    p { margin-bottom: 1rem; color: #374151; }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-    th { background: #f1f5f9; padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; border: 1px solid var(--border); }
-    td { padding: 0.6rem 0.75rem; border: 1px solid var(--border); vertical-align: top; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-    li { margin-bottom: 0.35rem; color: #374151; }
-    .badge { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 0.25rem; margin-right: 0.25rem; }
-    .meta { color: var(--gray); font-size: 0.85rem; margin-bottom: 2rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; }
-    .footer { text-align: center; color: var(--gray); font-size: 0.8rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    :root { --bg:#0a1628;--bg2:#0d1f3c;--border:#1e3a5f;--text:#e2e8f0;--muted:#94a3b8;--faint:#475569;--accent:#06b6d4;--accent-dim:rgba(6,182,212,0.12);--accent-border:rgba(6,182,212,0.3);--radius:16px; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .site-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1.25rem 1.5rem}
+    .header-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px}
+    .logo-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#1e3a5f,#0f2444);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:18px}
+    .logo-name{font-size:18px;font-weight:700;letter-spacing:-.02em} .logo-name span{color:var(--accent)}
+    .hero{max-width:860px;margin:0 auto;padding:4rem 1.5rem 3rem;text-align:center}
+    .hero-badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem}
+    .hero h1{font-size:2.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:1rem;line-height:1.15}
+    .hero p{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:540px;margin:0 auto 2.5rem}
+    .cards{max-width:700px;margin:0 auto;padding:0 1.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.hero h1{font-size:1.75rem}}
+    .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.75rem;text-decoration:none;display:block;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim) 0%,transparent 60%);opacity:0;transition:opacity .2s}
+    .card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4);text-decoration:none}
+    .card:hover::before{opacity:1}
+    .card-flag{font-size:2.25rem;margin-bottom:1rem;display:block}
+    .card-lang{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem}
+    .card-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.5rem;line-height:1.3}
+    .card-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
+    .card-link{font-size:.85rem;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:6px}
+    .card-link::after{content:'→';transition:transform .15s} .card:hover .card-link::after{transform:translateX(4px)}
+    .meta-section{max-width:700px;margin:0 auto;padding:0 1.5rem 4rem}
+    .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:560px){.meta-grid{grid-template-columns:1fr}}
+    .meta-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem}
+    .meta-label{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem}
+    .meta-value{font-size:.875rem;color:var(--muted);line-height:1.6}
+    .site-footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 1.5rem;text-align:center;font-size:.8rem;color:var(--faint);line-height:2;margin-top:auto}
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🔗 ClipTel</h1>
-    <p>Privacy Policy for the Chrome Extension</p>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-icon">📋</div>
+    <span class="logo-name">Clip<span>Tel</span> <span style="font-weight:400;color:var(--faint)">Privacy</span></span>
   </div>
-  <div class="container">
-    <div class="meta">
-      <strong>Last updated:</strong> 2026-04-18<br/>
-      <strong>Responsible:</strong> Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany<br/>
-      <strong>Contact:</strong> <a href="mailto:info@trssoftware.com">info@trssoftware.com</a>
+</header>
+<section class="hero">
+  <div class="hero-badge">Legal &amp; Privacy</div>
+  <h1>Privacy Policy<br/>ClipTel Chrome Extension</h1>
+  <p>ClipTel routes your clipboard content via your own private Telegram bot — no ClipTel server involved. Read our full privacy policy in your language.</p>
+</section>
+<div class="cards">
+  <a href="privacy-de.html" class="card">
+    <span class="card-flag">🇩🇪</span>
+    <div class="card-lang">Deutsch</div>
+    <div class="card-title">Datenschutzerklärung</div>
+    <div class="card-desc">Vollständige DSGVO-konforme Datenschutzerklärung inkl. Betroffenenrechte, Rechtsgrundlagen und Drittlandtransfer.</div>
+    <div class="card-link">Jetzt lesen</div>
+  </a>
+  <a href="privacy-en.html" class="card">
+    <span class="card-flag">🇬🇧</span>
+    <div class="card-lang">English</div>
+    <div class="card-title">Privacy Policy</div>
+    <div class="card-desc">Full GDPR-compliant privacy policy including data subject rights, legal bases, and international transfer information.</div>
+    <div class="card-link">Read now</div>
+  </a>
+</div>
+<div class="meta-section">
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="meta-label">Data Controller</div>
+      <div class="meta-value">Tino Strasser / TRS Software<br/>Walther-Rathenau-Str. 59<br/>75180 Pforzheim, Germany<br/><a href="mailto:info@trssoftware.com">info@trssoftware.com</a></div>
     </div>
-
-    <h2>1. Overview</h2>
-    <p>ClipTel is a Chrome browser extension that lets you transfer clipboard contents between your PC and your mobile phone using your own private Telegram bot. The extension is designed with privacy in mind: <strong>no ClipTel server is involved in transmitting your data.</strong></p>
-
-    <h2>2. Data We Collect and Store</h2>
-    <h3>2.1 Locally on Your Device</h3>
-    <p>The following data is stored exclusively in <code>chrome.storage.local</code> on your device:</p>
-    <table>
-      <tr><th>Data</th><th>Purpose</th></tr>
-      <tr><td>Telegram bot token</td><td>Authenticates with the Telegram Bot API</td></tr>
-      <tr><td>Telegram chat ID</td><td>Identifies your private chat channel</td></tr>
-      <tr><td>Last update ID</td><td>Tracks which messages have been processed</td></tr>
-      <tr><td>Poll interval setting</td><td>Your preferred background check interval</td></tr>
-      <tr><td>Clipboard history (last 50)</td><td>Shows sent/received snippets in the popup</td></tr>
-    </table>
-    <p>This data <strong>never leaves your device</strong> to any ClipTel server. It is deleted if you uninstall the extension or use "Disconnect &amp; reset" in settings.</p>
-
-    <h3>2.2 Data Transmitted to Telegram</h3>
-    <p>When you send or receive text through ClipTel, the content is transmitted to <strong>Telegram Messenger Inc.</strong> via their Bot API (<code>api.telegram.org</code>). This is TLS-encrypted but <strong>not end-to-end encrypted</strong>. Your IP address is visible to Telegram's servers. Telegram's Privacy Policy applies: <a href="https://telegram.org/privacy" target="_blank">telegram.org/privacy</a>.</p>
-
-    <h2>3. Third Parties</h2>
-    <p>ClipTel only communicates with one external service:</p>
-    <p><strong>Telegram Messenger Inc.</strong><br/>71–75 Shelton Street, London, WC2H 9JQ, United Kingdom<br/><a href="https://telegram.org/privacy">Privacy Policy</a></p>
-    <p>No analytics, advertising networks, or tracking services are used.</p>
-
-    <h2>4. Permissions</h2>
-    <table>
-      <tr><th>Permission</th><th>Reason</th></tr>
-      <tr><td><code>storage</code></td><td>Store your bot token, chat ID, and settings locally</td></tr>
-      <tr><td><code>clipboardRead</code></td><td>Read your clipboard to send it to your phone</td></tr>
-      <tr><td><code>clipboardWrite</code></td><td>Write incoming text to your clipboard</td></tr>
-      <tr><td><code>notifications</code></td><td>Confirm when text is sent or received</td></tr>
-      <tr><td><code>alarms</code></td><td>Background polling every 30–60 seconds</td></tr>
-      <tr><td><code>offscreen</code></td><td>Chrome MV3 requirement for clipboard access</td></tr>
-      <tr><td><code>contextMenus</code></td><td>Right-click "Send to phone" on selected text</td></tr>
-      <tr><td>Host: <code>api.telegram.org</code></td><td>Only this domain — no other sites accessed</td></tr>
-    </table>
-
-    <h2>5. Your Rights (GDPR)</h2>
-    <p>If you are in the EEA, you have the right to access, delete, and port your data. Since all data is stored locally, you can view it in Chrome DevTools → Application → Local Storage, and delete it via "Disconnect &amp; reset" or by uninstalling the extension. To lodge a complaint, contact your national data protection authority.</p>
-
-    <h2>6. Security</h2>
-    <ul>
-      <li>Bot token stored in <code>chrome.storage.local</code>, inaccessible to web pages</li>
-      <li>Token never logged to browser console or shown in notifications</li>
-      <li>All Telegram API calls use HTTPS</li>
-      <li>Host permissions strictly limited to <code>api.telegram.org</code></li>
-    </ul>
-
-    <h2>7. Children</h2>
-    <p>ClipTel is not directed at children under 13. We do not knowingly collect information from children.</p>
-
-    <h2>8. Changes</h2>
-    <p>Updates to this policy will be published at <a href="https://trs-software.github.io/cliptel-privacy/">trs-software.github.io/cliptel-privacy</a>.</p>
-
-    <h2>9. Contact</h2>
-    <p><a href="mailto:info@trssoftware.com">info@trssoftware.com</a></p>
-
-    <div class="footer">
-      Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany<br/>
-      <a href="https://github.com/TRS-Software/cliptel">github.com/TRS-Software/cliptel</a>
+    <div class="meta-item">
+      <div class="meta-label">Last Updated</div>
+      <div class="meta-value">18 April 2026</div>
+      <div class="meta-label" style="margin-top:1rem">Repository</div>
+      <div class="meta-value"><a href="https://github.com/TRS-Software/cliptel-privacy" target="_blank">cliptel-privacy on GitHub</a></div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Third-party services</div>
+      <div class="meta-value">Telegram Messenger Inc. only.<br/><a href="https://telegram.org/privacy" target="_blank">telegram.org/privacy</a></div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">No tracking</div>
+      <div class="meta-value">No cookies · No analytics<br/>No ads · No data sales</div>
     </div>
   </div>
+</div>
+<footer class="site-footer">
+  <a href="privacy-de.html">Datenschutzerklärung DE</a> ·
+  <a href="privacy-en.html">Privacy Policy EN</a> ·
+  <a href="https://github.com/TRS-Software/cliptel-privacy" target="_blank">GitHub</a><br/>
+  Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany
+</footer>
 </body>
 </html>

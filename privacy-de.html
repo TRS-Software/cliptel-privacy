@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Datenschutzerklärung – ClipTel</title>
+  <style>
+    :root {
+      --bg: #0a1628;
+      --bg2: #0d1f3c;
+      --border: #1e3a5f;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --faint: #475569;
+      --accent: #06b6d4;
+      --accent-dim: rgba(6,182,212,0.12);
+      --accent-border: rgba(6,182,212,0.3);
+      --green: #4ade80;
+      --yellow: #fbbf24;
+      --red: #f87171;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-size: 16px; line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 2px 6px; border-radius: 4px; font-size: 0.85em; color: var(--accent);
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+    }
+    .header-inner {
+      max-width: 860px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: linear-gradient(135deg, #1e3a5f, #0f2444);
+      border: 1px solid var(--accent-border);
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .logo-name { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    .logo-name span { color: var(--accent); }
+    .lang-switch { display: flex; gap: 8px; }
+    .lang-btn {
+      padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: all .15s;
+    }
+    .lang-btn.active, .lang-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    /* ── Main ── */
+    .main { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    .page-title { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.35rem; }
+    .page-date { font-size: 0.875rem; color: var(--faint); margin-bottom: 2.5rem; }
+
+    /* ── Meta card ── */
+    .meta-card {
+      background: var(--accent-dim); border: 1px solid var(--accent-border);
+      border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 2.5rem;
+      font-size: 0.9rem; color: var(--muted); line-height: 1.9;
+    }
+    .meta-card strong { color: var(--text); }
+    .meta-card a { color: var(--accent); }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 1.2rem; font-weight: 700; color: var(--text);
+      margin: 2.5rem 0 0.9rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+    h3 { font-size: 1rem; font-weight: 600; color: var(--muted); margin: 1.5rem 0 0.6rem; }
+
+    p { margin-bottom: 1rem; color: var(--muted); }
+
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    th { background: var(--bg2); color: var(--text); padding: 0.75rem 1rem; text-align: left; font-weight: 600; border-bottom: 1px solid var(--border); }
+    td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(30,58,95,0.5); color: var(--muted); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { color: var(--text); font-weight: 500; white-space: nowrap; }
+
+    /* ── Permission blocks ── */
+    .perm-block {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+    }
+    .perm-name { font-family: 'SF Mono', 'Fira Code', monospace; color: var(--accent); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .perm-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── Rights list ── */
+    .rights-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0 1.5rem; }
+    .rights-list li {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 0.9rem 1.1rem; font-size: 0.875rem; color: var(--muted); line-height: 1.65;
+    }
+    .rights-list li strong { color: var(--text); display: block; margin-bottom: 0.2rem; }
+
+    /* ── Warning box ── */
+    .warning {
+      background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.3);
+      border-radius: var(--radius); padding: 1rem 1.25rem; margin: 1.25rem 0;
+      font-size: 0.875rem; color: var(--yellow); line-height: 1.65;
+    }
+
+    /* ── Address block ── */
+    .address {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1rem 1.25rem; margin: 1rem 0; font-size: 0.9rem; color: var(--muted); line-height: 1.9;
+    }
+    .address strong { color: var(--text); display: block; margin-bottom: 0.2rem; }
+
+    /* ── Checklist ── */
+    .checklist { list-style: none; margin: 0.75rem 0 1.5rem; }
+    .checklist li { display: flex; align-items: baseline; gap: 10px; padding: 4px 0; font-size: 0.9rem; color: var(--muted); }
+    .checklist li::before { content: "✗"; color: var(--red); font-weight: 700; flex-shrink: 0; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--bg2); border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem; text-align: center;
+      font-size: 0.8rem; color: var(--faint); line-height: 2;
+    }
+    .site-footer a { color: var(--accent); }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      margin-top: 3rem; padding: 1rem 1.25rem;
+      border: 1px dashed var(--border); border-radius: var(--radius);
+      font-size: 0.8rem; color: var(--faint); line-height: 1.65; font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      .page-title { font-size: 1.5rem; }
+      .main { padding: 2rem 1rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">📋</div>
+      <span class="logo-name">Clip<span>Tel</span></span>
+    </a>
+    <nav class="lang-switch">
+      <a href="privacy-de.html" class="lang-btn active">🇩🇪 Deutsch</a>
+      <a href="privacy-en.html" class="lang-btn">🇬🇧 English</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <h1 class="page-title">Datenschutzerklärung</h1>
+  <p class="page-date">ClipTel Chrome-Extension · Stand: 18. April 2026</p>
+
+  <div class="meta-card">
+    <strong>Verantwortlicher:</strong> Tino Strasser / TRS Software<br/>
+    Walther-Rathenau-Str. 59 · 75180 Pforzheim · Deutschland<br/>
+    <strong>Kontakt:</strong> <a href="mailto:info@trssoftware.com">info@trssoftware.com</a><br/>
+    <strong>Dieses Dokument auf Englisch:</strong> <a href="privacy-en.html">privacy-en.html</a>
+  </div>
+
+  <h2 id="geltungsbereich">1. Geltungsbereich</h2>
+  <p>Diese Datenschutzerklärung gilt für die Chrome-Browser-Extension <strong>ClipTel – Clipboard to Telegram</strong> und alle damit verbundenen Datenverarbeitungsvorgänge. ClipTel ist eine browserseitige Software ohne eigene Cloud-Infrastruktur. Es existiert kein ClipTel-Server, der Nutzerdaten verarbeitet oder speichert. Die Extension vermittelt Daten ausschließlich zwischen dem Gerät des Nutzers und dem Telegram-Bot-API-Dienst.</p>
+
+  <h2 id="verantwortlicher">2. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
+  <div class="address">
+    <strong>Tino Strasser / TRS Software</strong>
+    Walther-Rathenau-Str. 59<br/>
+    75180 Pforzheim<br/>
+    Deutschland<br/>
+    E-Mail: <a href="mailto:info@trssoftware.com">info@trssoftware.com</a>
+  </div>
+
+  <h2 id="rechtsgrundlagen">3. Allgemeines zur Datenverarbeitung und Rechtsgrundlagen</h2>
+  <h3>3.1 Grundsatz der Datenminimierung</h3>
+  <p>ClipTel ist nach dem Prinzip der Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO) entwickelt. Es werden ausschließlich Daten verarbeitet, die zur Kernfunktion — bidirektionaler Clipboard-Transfer via Telegram-Bot — zwingend erforderlich sind.</p>
+  <h3>3.2 Rechtsgrundlagen</h3>
+  <p>Die Verarbeitung stützt sich auf:</p>
+  <ul style="padding-left:1.25rem; margin-bottom:1rem; color:var(--muted)">
+    <li style="margin-bottom:.5rem"><strong style="color:var(--text)">Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</strong> — für Konfigurationsdaten (Token, Chat-ID)</li>
+    <li style="margin-bottom:.5rem"><strong style="color:var(--text)">Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> — für die Übermittlung von Clipboard-Inhalten an Telegram; im Onboarding durch Bestätigungs-Checkbox eingeholt; jederzeit widerrufbar durch Deinstallation oder „Trennen &amp; zurücksetzen"</li>
+    <li><strong style="color:var(--text)">Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen)</strong> — für technisch notwendige lokale Speicherung (z. B. letzte Update-ID)</li>
+  </ul>
+
+  <h2 id="datenarten">4. Art der verarbeiteten Daten</h2>
+  <h3>4.1 Lokal auf dem Gerät (chrome.storage.local)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Datum</th><th>Zweck</th><th>Rechtsgrundlage</th></tr>
+      <tr><td>Bot-Token</td><td>Authentifizierung gegenüber Telegram Bot-API</td><td>Art. 6 I b</td></tr>
+      <tr><td>Chat-ID</td><td>Identifikation des privaten Chats</td><td>Art. 6 I b</td></tr>
+      <tr><td>Letzte Update-ID</td><td>Vermeidung doppelter Verarbeitung</td><td>Art. 6 I f</td></tr>
+      <tr><td>Poll-Intervall</td><td>Nutzerpräferenz Hintergrund-Polling</td><td>Art. 6 I b</td></tr>
+      <tr><td>Langinhalt-Modus</td><td>Präferenz für Inhalte &gt;4.000 Zeichen</td><td>Art. 6 I b</td></tr>
+      <tr><td>Clipboard-Verlauf (max. 50)</td><td>Darstellung gesendeter/empfangener Texte</td><td>Art. 6 I a</td></tr>
+      <tr><td>Datenschutz-Bestätigung</td><td>Nachweis der erteilten Einwilligung</td><td>Art. 6 I c</td></tr>
+    </table>
+  </div>
+  <h3>4.2 Verarbeitung je Chrome-Permission</h3>
+  <div class="perm-block"><div class="perm-name">storage</div><div class="perm-desc">Speichert alle oben genannten Konfigurationsdaten lokal im Browser. Nicht zugänglich für Webseiten oder andere Extensions.</div></div>
+  <div class="perm-block"><div class="perm-name">clipboardRead</div><div class="perm-desc">Liest den Clipboard-Inhalt ausschließlich auf explizite Nutzerinitiative (Klick, Tastaturkürzel Ctrl+Shift+C oder Kontextmenü). Inhalt wird an Telegram-API übermittelt und im lokalen Verlauf gespeichert.</div></div>
+  <div class="perm-block"><div class="perm-name">clipboardWrite</div><div class="perm-desc">Schreibt eingehende Textnachrichten vom Mobilgerät automatisch in die Zwischenablage.</div></div>
+  <div class="perm-block"><div class="perm-name">notifications</div><div class="perm-desc">Zeigt Desktop-Benachrichtigungen zur Bestätigung gesendeter/empfangener Texte (max. 100 Zeichen Vorschau). Bot-Token erscheint nie in Benachrichtigungen.</div></div>
+  <div class="perm-block"><div class="perm-name">alarms</div><div class="perm-desc">Erstellt wiederkehrenden Hintergrund-Alarm (min. 30s, max. 60s) für Telegram-Polling. Technisch notwendig, da MV3-Service-Worker keine dauerhaften Verbindungen halten können.</div></div>
+  <div class="perm-block"><div class="perm-name">offscreen</div><div class="perm-desc">Erstellt bei Bedarf ein unsichtbares Hintergrund-Dokument, das stellvertretend Clipboard-Zugriffe durchführt (Chrome MV3-Anforderung). Enthält keine personenbezogenen Daten, wird nach der Operation freigegeben.</div></div>
+  <div class="perm-block"><div class="perm-name">contextMenus</div><div class="perm-desc">Fügt dem Rechtsklick-Menü bei markiertem Text „An Handy senden (ClipTel)" hinzu. Markierter Text wird per Klick übermittelt.</div></div>
+  <div class="perm-block"><div class="perm-name">host_permissions: https://api.telegram.org/*</div><div class="perm-desc">Ausschließlich diese Domain wird kontaktiert. Die Extension greift auf keine weiteren Webseiten oder APIs zu und liest keine besuchten Seiten.</div></div>
+
+  <h2 id="telegram">5. Datenübermittlung an Telegram</h2>
+  <h3>5.1 Empfänger und Datenarten</h3>
+  <div class="address">
+    <strong>Telegram Messenger Inc.</strong>
+    71–75 Shelton Street · London, WC2H 9JQ · Vereinigtes Königreich<br/>
+    Datenschutzerklärung: <a href="https://telegram.org/privacy" target="_blank">telegram.org/privacy</a>
+  </div>
+  <p>Übermittelt werden: Clipboard-Textinhalt · Bot-Token (im API-Request-Pfad) · Chat-ID · IP-Adresse des PCs (technisch unvermeidbar).</p>
+  <div class="warning">
+    ⚠️ <strong>Kein Ende-zu-Ende-Schutz:</strong> Telegram Cloud-Chats via Bot-API verwenden serverseitige Verschlüsselung. Telegram kann technisch auf die übertragenen Inhalte zugreifen. <strong>Keine Passwörter oder hochsensiblen Daten über ClipTel senden.</strong>
+  </div>
+  <p>Die Übertragung zum Telegram-Server erfolgt stets über HTTPS (TLS). Im Onboarding wird durch eine Bestätigungs-Checkbox explizit auf diesen Umstand hingewiesen.</p>
+
+  <h2 id="speicherdauer">6. Speicherdauer</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Datenart</th><th>Speicherdauer</th><th>Löschmöglichkeit</th></tr>
+      <tr><td>Lokale Konfiguration</td><td>Bis Deinstallation oder manuellem Reset</td><td>„Trennen &amp; zurücksetzen" in Einstellungen</td></tr>
+      <tr><td>Clipboard-Verlauf</td><td>Bis manueller Löschung oder Verdrängung (max. 50 Einträge)</td><td>„Löschen"-Button im Popup</td></tr>
+      <tr><td>Daten bei Telegram</td><td>Gem. Telegrams Datenschutzerklärung</td><td>Im Telegram-Chat durch Nutzer löschbar</td></tr>
+    </table>
+  </div>
+
+  <h2 id="drittstaaten">7. Übermittlung in Drittstaaten</h2>
+  <h3>7.1 Telegram (UK / VAE)</h3>
+  <p>Telegram ist im UK ansässig. Für das UK besteht ein EU-Angemessenheitsbeschluss vom 28. Juni 2021 (Art. 45 DSGVO). Für den operativen Sitz in Dubai (VAE) besteht kein Angemessenheitsbeschluss; Rechtsgrundlage ist <strong>Art. 49 Abs. 1 lit. a DSGVO (Einwilligung)</strong> nach ausdrücklichem Hinweis im Onboarding. Im Drittland besteht möglicherweise kein dem EU-Recht gleichwertiges Datenschutzniveau.</p>
+  <h3>7.2 Google Chrome Web Store</h3>
+  <p>Die Installation über den Chrome Web Store unterliegt den <a href="https://policies.google.com/privacy" target="_blank">Datenschutzbestimmungen von Google</a> und liegt außerhalb des Verantwortungsbereichs von TRS Software.</p>
+
+  <h2 id="profiling">8. Automatisierte Entscheidungsfindung / Profiling</h2>
+  <p>ClipTel führt keine automatisierte Entscheidungsfindung nach Art. 22 DSGVO durch und erstellt keine Nutzerprofile. Es werden keine Analyse-, Tracking- oder Statistikdaten erhoben.</p>
+
+  <h2 id="betroffenenrechte">9. Rechte der betroffenen Person</h2>
+  <ul class="rights-list">
+    <li><strong>Art. 15 DSGVO — Auskunftsrecht</strong>Alle gespeicherten Daten sind jederzeit über Chrome DevTools → Application → Local Storage einsehbar.</li>
+    <li><strong>Art. 16 DSGVO — Recht auf Berichtigung</strong>Token und Chat-ID können jederzeit in den Extension-Einstellungen aktualisiert werden.</li>
+    <li><strong>Art. 17 DSGVO — Recht auf Löschung</strong>„Trennen &amp; zurücksetzen" in den Einstellungen oder Deinstallation der Extension löscht alle lokalen Daten vollständig.</li>
+    <li><strong>Art. 18 DSGVO — Einschränkung der Verarbeitung</strong>Soweit die gesetzlichen Voraussetzungen vorliegen.</li>
+    <li><strong>Art. 20 DSGVO — Datenübertragbarkeit</strong>Daten liegen in standardisiertem JSON-Format vor; exportierbar über Chrome DevTools → Application → Local Storage.</li>
+    <li><strong>Art. 21 DSGVO — Widerspruchsrecht</strong>Bei Verarbeitung nach Art. 6 I f DSGVO besteht ein Widerspruchsrecht aus Gründen der besonderen Situation.</li>
+    <li><strong>Art. 7 Abs. 3 DSGVO — Widerruf der Einwilligung</strong>Jederzeit durch Deinstallation oder „Trennen &amp; zurücksetzen". Rechtmäßigkeit bis zum Widerruf bleibt unberührt.</li>
+    <li>
+      <strong>Art. 77 DSGVO — Beschwerderecht bei der Aufsichtsbehörde</strong>
+      LfDI Baden-Württemberg · Königstraße 10a · 70173 Stuttgart<br/>
+      Tel.: +49 711 615541-0 · <a href="mailto:poststelle@lfdi.bwl.de">poststelle@lfdi.bwl.de</a><br/>
+      <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank">www.baden-wuerttemberg.datenschutz.de</a>
+    </li>
+  </ul>
+
+  <h2 id="dsb">10. Datenschutzbeauftragter</h2>
+  <p>TRS Software ist als Einzelunternehmen nicht zur Bestellung eines Datenschutzbeauftragten verpflichtet (Art. 37 DSGVO). Datenschutzrechtliche Anfragen richten Sie bitte an <a href="mailto:info@trssoftware.com">info@trssoftware.com</a>.</p>
+
+  <h2 id="sicherheit">11. Datensicherheit</h2>
+  <ul style="padding-left:1.25rem; margin-bottom:1rem; color:var(--muted); line-height:1.9">
+    <li>Bot-Token in <code>chrome.storage.local</code> — für Webseiten und andere Extensions nicht zugänglich</li>
+    <li>Bot-Token erscheint nie in Browser-Konsole oder Benachrichtigungen</li>
+    <li>Alle API-Kommunikation über HTTPS (TLS)</li>
+    <li>Host-Permissions beschränkt auf <code>https://api.telegram.org/*</code></li>
+    <li>Extension-Dateien werden über die gesicherte Chrome-Web-Store-Verbindung (Google) übertragen</li>
+  </ul>
+
+  <h2 id="tracking">12. Keine Cookies, kein Tracking, kein Analytics</h2>
+  <ul class="checklist">
+    <li>Keine Cookies (weder Erst- noch Drittanbieter)</li>
+    <li>Kein Tracking (kein Google Analytics, Matomo, Mixpanel o. ä.)</li>
+    <li>Kein Fingerprinting (keine Erhebung von Browser- oder Geräteeigenschaften)</li>
+    <li>Keine Werbung (keine Werbenetzwerke, kein Behavioral Advertising)</li>
+    <li>Keine Datenverkäufe (Nutzerdaten werden nicht an Dritte verkauft)</li>
+  </ul>
+
+  <h2 id="opensource">13. Open-Source-Hinweis</h2>
+  <p>Der Quellcode liegt im privaten Repository <a href="https://github.com/TRS-Software/cliptel" target="_blank">TRS-Software/cliptel</a>. Das Binary wird über den Chrome Web Store vertrieben. Diese Datenschutzerklärung ist öffentlich einsehbar unter <a href="https://trs-software.github.io/cliptel-privacy/">trs-software.github.io/cliptel-privacy/</a>. Das Datenschutz-Repository ist öffentlich: <a href="https://github.com/TRS-Software/cliptel-privacy" target="_blank">TRS-Software/cliptel-privacy</a>.</p>
+
+  <h2 id="aenderungen">14. Änderungen dieser Datenschutzerklärung</h2>
+  <p>TRS Software behält sich Änderungen bei wesentlichen Anpassungen der Extension oder der Rechtslage vor. Das Änderungsdatum ist oben angegeben. Bei wesentlichen, die Nutzerrechte berührenden Änderungen wird ein Hinweis in der Extension eingeblendet. Aktuelle Version immer unter: <a href="https://trs-software.github.io/cliptel-privacy/privacy-de.html">trs-software.github.io/cliptel-privacy/privacy-de.html</a>.</p>
+
+  <h2 id="kontakt">15. Kontakt</h2>
+  <div class="address">
+    <strong>Tino Strasser / TRS Software</strong>
+    Walther-Rathenau-Str. 59<br/>
+    75180 Pforzheim<br/>
+    Deutschland<br/>
+    E-Mail: <a href="mailto:info@trssoftware.com">info@trssoftware.com</a>
+  </div>
+
+  <div class="disclaimer">
+    Diese Datenschutzerklärung wurde mit Sorgfalt erstellt und ersetzt keine individuelle Rechtsberatung. Bei rechtlichen Unsicherheiten empfehlen wir die Konsultation eines auf Datenschutzrecht spezialisierten Rechtsanwalts.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="index.html">ClipTel Privacy</a> ·
+  <a href="privacy-de.html">Deutsch</a> ·
+  <a href="privacy-en.html">English</a> ·
+  <a href="https://github.com/TRS-Software/cliptel-privacy" target="_blank">GitHub</a><br/>
+  Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Deutschland
+</footer>
+
+</body>
+</html>
