@@ -3,7 +3,7 @@
 **Last updated: 2026-04-18**
 
 **Responsible:** Tino Strasser / TRS Software  
-Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany  
+Zum Isetal 1 · 38518 Gifhorn · Germany  
 E-Mail: info@trssoftware.com
 
 ---
@@ -120,4 +120,4 @@ Questions or concerns? Contact us at:
 
 ---
 
-*Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany*
+*Tino Strasser / TRS Software · Zum Isetal 1 · 38518 Gifhorn · Germany*

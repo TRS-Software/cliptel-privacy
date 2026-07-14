@@ -17,8 +17,8 @@ ClipTel ist eine browserseitige Software ohne eigene Cloud-Infrastruktur. Es exi
 Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
 **Tino Strasser / TRS Software**  
-Walther-Rathenau-Str. 59  
-75180 Pforzheim  
+Zum Isetal 1  
+38518 Gifhorn  
 Deutschland  
 E-Mail: info@trssoftware.com
 
@@ -158,12 +158,12 @@ Als betroffene Person stehen Ihnen nach der DSGVO folgende Rechte zu:
 
 **Art. 77 DSGVO — Beschwerderecht bei einer Aufsichtsbehörde:** Sie haben das Recht, sich bei der zuständigen Datenschutz-Aufsichtsbehörde zu beschweren:
 
-**Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW)**  
-Königstraße 10a  
-70173 Stuttgart  
-Telefon: +49 711 615541-0  
-E-Mail: poststelle@lfdi.bwl.de  
-Website: https://www.baden-wuerttemberg.datenschutz.de
+**Der Landesbeauftragte für den Datenschutz Niedersachsen (LfD Niedersachsen)**  
+Prinzenstraße 5  
+30159 Hannover  
+Telefon: +49 511 120-4500  
+E-Mail: poststelle@lfd.niedersachsen.de  
+Website: https://lfd.niedersachsen.de
 
 ---
 
@@ -220,8 +220,8 @@ Die jeweils aktuelle Version ist stets abrufbar unter:
 Bei Fragen oder Anliegen zum Datenschutz:
 
 **Tino Strasser / TRS Software**  
-Walther-Rathenau-Str. 59  
-75180 Pforzheim  
+Zum Isetal 1  
+38518 Gifhorn  
 Deutschland  
 E-Mail: **info@trssoftware.com**
 
@@ -229,4 +229,4 @@ E-Mail: **info@trssoftware.com**
 
 *Diese Datenschutzerklärung wurde mit Sorgfalt erstellt. Sie ersetzt keine individuelle Rechtsberatung. Bei rechtlichen Unsicherheiten empfehlen wir die Konsultation eines auf Datenschutzrecht spezialisierten Rechtsanwalts.*
 
-*Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim*
+*Tino Strasser / TRS Software · Zum Isetal 1 · 38518 Gifhorn*

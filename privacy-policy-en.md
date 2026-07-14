@@ -17,8 +17,8 @@ ClipTel is a browser-side piece of software with no cloud infrastructure of its 
 The data controller within the meaning of the General Data Protection Regulation (GDPR) is:
 
 **Tino Strasser / TRS Software**  
-Walther-Rathenau-Str. 59  
-75180 Pforzheim  
+Zum Isetal 1  
+38518 Gifhorn  
 Germany  
 E-mail: info@trssoftware.com
 
@@ -158,13 +158,13 @@ As a data subject, you have the following rights under the GDPR:
 
 **Art. 77 GDPR — Right to lodge a complaint:** You have the right to lodge a complaint with a supervisory authority. In Germany, the competent authority is:
 
-**Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW)**  
-Königstraße 10a  
-70173 Stuttgart  
+**Der Landesbeauftragte für den Datenschutz Niedersachsen (LfD Niedersachsen)**  
+Prinzenstraße 5  
+30159 Hannover  
 Germany  
-Phone: +49 711 615541-0  
-E-mail: poststelle@lfdi.bwl.de  
-Website: https://www.baden-wuerttemberg.datenschutz.de
+Phone: +49 511 120-4500  
+E-mail: poststelle@lfd.niedersachsen.de  
+Website: https://lfd.niedersachsen.de
 
 ---
 
@@ -221,8 +221,8 @@ The current version is always available at:
 For any data protection questions or concerns:
 
 **Tino Strasser / TRS Software**  
-Walther-Rathenau-Str. 59  
-75180 Pforzheim  
+Zum Isetal 1  
+38518 Gifhorn  
 Germany  
 E-mail: **info@trssoftware.com**
 
@@ -230,4 +230,4 @@ E-mail: **info@trssoftware.com**
 
 *This Privacy Policy has been prepared with care. It does not substitute individual legal advice. If you have legal concerns, we recommend consulting a lawyer specialising in data protection law.*
 
-*Tino Strasser / TRS Software · Walther-Rathenau-Str. 59 · 75180 Pforzheim · Germany*
+*Tino Strasser / TRS Software · Zum Isetal 1 · 38518 Gifhorn · Germany*
